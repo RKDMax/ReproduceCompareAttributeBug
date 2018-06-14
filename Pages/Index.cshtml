@@ -1,0 +1,11 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+    <a class="btn btn-primary" asp-page="ThisWorks">This Works</a> <a class="btn btn-danger" asp-page="ThisDoesNotWork">This Does Not Work</a>
+
+@section Scripts {
+    @*@{await Html.RenderPartialAsync("_ValidationScriptsPartial");}*@
+}

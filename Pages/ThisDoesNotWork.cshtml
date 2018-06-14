@@ -1,0 +1,26 @@
+﻿@page
+@model ThisDoesNotWorkModel
+@{
+    ViewData["Title"] = "This does not work";
+}
+
+<form method="post">
+    <h1>@ViewData["Title"]</h1>
+    <div class="col-lg-12">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" />
+        <span class="text-danger" asp-validation-for="Name"></span>
+
+        <label asp-for="ConfirmName"></label>
+        <input asp-for="ConfirmName" />
+        <span class="text-danger" asp-validation-for="ConfirmName"></span>
+    </div>
+
+    <div class="col-lg-12">
+        <a asp-page="/Index" class="btn btn-default">Back</a> <input class="btn btn-primary" type="submit" value="Submit" />
+    </div>
+</form>
+
+@section Scripts {
+    @*@{await Html.RenderPartialAsync("_ValidationScriptsPartial");}*@
+}

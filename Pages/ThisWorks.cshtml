@@ -1,0 +1,25 @@
+﻿@page
+@model ThisWorksModel
+@{
+    ViewData["Title"] = "This works as expected";
+}
+
+<form method="post">
+    <h1>@ViewData["Title"]</h1>
+    <div class="col-lg-12">
+        <label asp-for="ViewModel.Name"></label>
+        <input asp-for="ViewModel.Name" />
+        <span class="text-danger" asp-validation-for="ViewModel.Name"></span>
+
+        <label asp-for="ViewModel.ConfirmName"></label>
+        <input asp-for="ViewModel.ConfirmName" />
+        <span class="text-danger" asp-validation-for="ViewModel.ConfirmName"></span>
+    </div>
+    <div class="col-lg-12">
+        <a asp-page="/Index" class="btn btn-default">Back</a> <input class="btn btn-primary" type="submit" value="Submit" />
+    </div>
+</form>
+
+@section Scripts {
+    @*@{await Html.RenderPartialAsync("_ValidationScriptsPartial");}*@
+}
